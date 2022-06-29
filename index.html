@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HearthStoneW</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Шрифт-->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--css-->
+    <link rel="stylesheet" href="main.css">
+    <link href="onepage-scroll.css">
+    <link href="jquery.onepage-scroll.js">
+    <link href="jquery.onepage-scroll.min.js">
+</head>
+<body>
+
+<!-- Шапка фиксиков-->
+<nav class="navbar navbar-custom" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Навигация</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">HearthstoneW</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="#">Деки</a></li>
+                <li><a href="https://hsdecktracker.net/download/">deckTracker</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Авторы <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://vk.com/dankkaaa" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVEhL7ZbNaxNBGMaXpAXv0pP2XlBJD+KphSLtxZs3pQdPbU9e/Ae8KJvGSwuKpaD24BcpFhoKLUXxJBEEsxtL23w1xBpCSqPR1JiYZJ/Ou5nNbsJos0lKLnngd5h3Z55n9s1kGamn7uru+z5JVi855eB4O5CH7tWUPIFhh6xEHW4VnUGJkCd3/4fY7mii2KANZDUseb1OniLQfeWicGEHkNyBCzxFILcyIlrUCcibpwjUC26gfzaI8Vcx3FxNYGZjH4OPtoXzRDQdfHvzG97Gczr3PqT12rmH2/iUysOQ21+tE6PPo7X5xPU38dozoungidcxbg9oDNeTkF6fXt+vFpmM4L5ZFYG0uaF8qYKhxd1aKNF0MOFP/uZWgC/yU69N+hK8YgZPWTZDom5ZfQhbwVdfmm9NurX2FXfeJfkIePz5EJefhfGrWOEVYCWUhdPiYWArmFjeyXJLoFjW8P1PmY+AsqbpGMqxDQzMb9WtN7AdTAcqdVTi1v/X34qGK0vhuvUGtoOJsRdRlJhpo6j2o2B2gERj4yBaaSmYuObdQ8bSZtJTNYOzc1v638cq6tB51inr+paDCfpgeD4eIJQpgBpgnOozD4JYYAeNWk2i3/oG+8hY17YV3A694Hp17SLArifdufqQ5C8umig0aAUKZZ7c/QTR7jp1vT3xTXs6VUnSMfZvgA6hayf5AAAAAElFTkSuQmCC">  Вк автора</a></li>
+                        <li><a href="https://vk.com/vitalkaaa" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVEhL7ZbNaxNBGMaXpAXv0pP2XlBJD+KphSLtxZs3pQdPbU9e/Ae8KJvGSwuKpaD24BcpFhoKLUXxJBEEsxtL23w1xBpCSqPR1JiYZJ/Ou5nNbsJos0lKLnngd5h3Z55n9s1kGamn7uru+z5JVi855eB4O5CH7tWUPIFhh6xEHW4VnUGJkCd3/4fY7mii2KANZDUseb1OniLQfeWicGEHkNyBCzxFILcyIlrUCcibpwjUC26gfzaI8Vcx3FxNYGZjH4OPtoXzRDQdfHvzG97Gczr3PqT12rmH2/iUysOQ21+tE6PPo7X5xPU38dozoungidcxbg9oDNeTkF6fXt+vFpmM4L5ZFYG0uaF8qYKhxd1aKNF0MOFP/uZWgC/yU69N+hK8YgZPWTZDom5ZfQhbwVdfmm9NurX2FXfeJfkIePz5EJefhfGrWOEVYCWUhdPiYWArmFjeyXJLoFjW8P1PmY+AsqbpGMqxDQzMb9WtN7AdTAcqdVTi1v/X34qGK0vhuvUGtoOJsRdRlJhpo6j2o2B2gERj4yBaaSmYuObdQ8bSZtJTNYOzc1v638cq6tB51inr+paDCfpgeD4eIJQpgBpgnOozD4JYYAeNWk2i3/oG+8hY17YV3A694Hp17SLArifdufqQ5C8umig0aAUKZZ7c/QTR7jp1vT3xTXs6VUnSMfZvgA6hayf5AAAAAElFTkSuQmCC">  Вк помощника</a></li>
+                        <li class="divider"></li>
+
+                        <li><a href="https://www.instagram.com/playhearthstone/?hl=ru" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASuSURBVEhLnVZnUxtXFOUfJPkBKd/TPuSHZSaAJAQmGINQtT3jUIQASSCKMSUggxE2xpjgmKGY3gIIZAwCSRRpVXe1J/e9XQSYMpPcmTNadu85577zVg/lfV5VutavbNrmn635rl/+Cxjn0a/OL1WZ61WldX5nLvQMW3QdH60l/QfmkuehuzEQstzzHpuKvTFC2qTvS5t1nWdmTeuoJd/zrSqrlCrut1S+T9hsa/g/sFhWYDTOw1D2RjYVeoJXTCwaj4/EU6zxoW0ddeZtuE0f0VkVRE9lCH0VEXgrjtFbGUaX4QjthiCcpgCeWDevGVmtqzCVj4tmjWeEixu19i/Muqcf68076DaEMFwew0i5gMVnKZwEJGRF3Frs2TH1/N13imrLVTOztn2PaedZ8pt/qC9+lWGi5/g0o6gmT2SEP4gITYkIE9jnEeFgWuQ9B/MiEpEs792nvr7KCOxmPzewlPTvM+08m6bpR4d+TGLC42UCdltTnJAikWOdgEj+zTgqEOCn5/OlAoJzykALnUk+IEvCVjJ4wrS5gUs3lt2i5jARRT/FEpHvFD9H3JtGvD+NcJGAzLGM010pl0KDfkzMGfQWjudIoGHS00nEdLtI6NeQLF5A2rqE7FwEcjRDECHOnkEw7CHpJZO+NOelKDqZuEvFAl7fF8BSuWJwXBDloqyyk0dI35vhyFgXgQQxJRnZtVMOds3uZSwLNMASoto9pCYynMvMAhoBzqJLBl7NCFIlc1yQFTconULGMAJ55RMJZiF1jCJj64VoGUDGNasYfojkBpEmI5x7ngQNLecMXugGlcZS1WBxA5KjFlJDNRCPQ9718+vLkHd3ACGBdMUY57KhWAlFW2QQYwa4avBgDFKNkzfJK4s5IW4Q8CPrrIHURGhUDQJkEBf4tfikDdmpIOcys4R+lQzeXhj4SjtpYiIzQSp5lTa1pRby0zpgd4OWRO/66J9Alx14Zof8iq7pnryxmhtEXl7m3PPIBrVDlwweuJXGxhrehC1qZmIMAx5i0XeDmezTS8Ag03UqCTz3IOtRomSrZsX2iBmwVK4YZJ00fScJZiVgZx3oricBwjBhoh04+IdE4woC9HyQjNUh2ErlTbonSZRENTJG31WD4UrXxcShA9opehXHG4G/Gm7HGwfgVTm91BuPQg7uK0nU12JI770weGluUhp7CMuv+VJxSNm/o01/TyuYrgVmKb5p2pN3JHzZaIS4AVodlTzhy70EvvIWxYAdSENGEmKRjKrk4BonIHMGxGg/ovMXOCOcUN6HqwQWW0zp3VT2TW5V9mSwrAVGjet7fly3/t4sY/jSZHO0H8E+Ok73aCzlILux2H6dUaSrL5X9UmNmr7Nb75H5cc2qQd+2vt2lZj5DUWzbFOw8AsIUT4zuxymKKH0ekrn/ofJ8izBJooz3ltCtGGzWNKBO17HAxVkZte5vHMUt4nYPmWyq5MBjEqa/ExTf5zil1e6oQ6xR3/nKB+qx5XDAXtSStv7W9LUqrxT7H+oubfO3mZx4YXfA19IEX5vzdrgb4WugPoY/iPPYidb7bjpF25fZwKrs9WI/PcwFrp9u+mlyFxjn+s+WvLx/AXMmqREYppfKAAAAAElFTkSuQmCC">  hearthStone в INST</a></li>
+                        <li><a href="https://vk.com/hearthstone" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVEhL7ZU/LwRRFMVnt/IJFBLUOt+A2sdQKHUKn8CwlYhGoqOh0YiwIrrdRjIr1r+IAotMxWY3MmYz17tcybjnrpjJ6vaXnGJezj1n5r1kntcnG6WT0YIflIt+EBX9GmVTEPGs55+NSBpSWAgO7eG/67OkG/neXCuIJA6xB7JL4hDLPH/8RGne4oSqjTbN7N2D91sSh1hmXZBmausW/CyJQyxzuoCfJzdv5Ilo7ugR/CyJQyyzLpjY+CqIOgmNr1+BnyVxiGXutkU71680tFIHP0viEMucLlishLRUDaniDpkJ2zENr57DjMQh2sjSW8QaXK7LCtFsufHDz5I4RBtZumCgdErTu3ey0uMCzXMrNs9B4hBtZOmCTpLQQ/Odti9eaGztEvwsiUMscx5JHPLvP7ve/K5r+xJn4C4LV3KQ70vcheNmf71w+iCe9wG2H1RhvXGeLAAAAABJRU5ErkJggg==">  HearthStone в ВК</a></li>
+                        <li><a href="https://www.facebook.com/Hearthstone/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEUSURBVEhLY6AL8J9wdkvUjEsnqYkDJpzbDjWegSF82qXzM878/U9NHDHt0lWo8YPYgvkX/v5fffXv/2WX//5fdPHv/5lnEXIUWbAQaPCDD//+//uPClYBLYOpociCJ5/QjYYAqlgAChJk8OP3//+vv/7//wqIlwODCqaObAv23kO4/u23///nnMOujmwLDj1EWHDt9T+sakCYKhZcfUUlCzbe/At2LQg//ww1HQjefYf4AoQvvUS1jCQLkF2NC4DiA1kP1S24/54CH6y88vf/wQf/wPj2W4Rlzz79h4tvuIGqZ3BFMjIetYAgHqEWgCromNlXzxODc5bevNy06d5NEC5acfsqNjUgHDTp/C6o8bQEDAwAsqVORkcClvgAAAAASUVORK5CYII=">  hearthStone в FB</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="main">
+    <section>
+<div class="container">
+    <div class="papapa">
+    <img src="img/Hearthstone_Logo.png" class="img-fluid mb-3 mb-md-0" align="right" width="310" height="310">
+    </div>
+    <div align="left" >
+        <!--текст про игру-->
+    <h3>
+        <b><h2><p style="color:#e11b2a" class="text">
+                         Hearthstone: Heroes of Warcraft</h2></p></b>
+        <p class="game"> (также известная как Hearthstone) </p>
+        <p class="game"> — коллекционная карточная онлайн-игра</p>
+        <p class="game"> по мотивам вселенной Warcraft,</p>
+        <p class="game"> разработанная компанией Blizzard Entertainment</p>
+        <p class="game"> и распространяемая по модели free-to-play.</p>
+        <br>
+        <p class="game"> Игра была выпущена для персональных компьютеров 11 марта 2014г</p>
+        <p class="game"> Позже она была портирована на платформы iOS и Android.</p>
+
+    </h3>
+    </div>
+    <br><br><br><br>
+    <!--кнопка-->
+  <br> <button class="btn btn-lg btn-outline-secondary"
+            href="https://www.battle.net/download/getInstallerForGame?os=win&locale=ruRU&version=LIVE&gameProgram=HEARTHSTONE"
+               style="width: 250px;height:70px">Скачать</button>
+    <script async=""
+            src="https://cdn.carbonads.com/carbon.js?zoneid=1673&amp;
+    serve=C6AILKT&amp;
+    placement=getbootstrapcom"
+            id="_carbonads_js"></script>
+
+</div>
+</section>
+<br><br><br><br><br><br><br><br><br>
+    <section>
+<div class="screen" align="center" style="color:#ed4e3e"><h2>Трейлер</h2><br>
+    <iframe width="1294" height="600" src="https://www.youtube.com/embed/6CyfGTgnYuI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+    </section>
+    <section>
+<div class="screen" align="center" style="color:#ed4e3e"><h2>Скриншоты игры</h2></div>
+<hr>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" align="center" style="background-color: #c91725">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active" style="background-color:ivory"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1" style="background-color: ivory"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2" style="background-color: ivory"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="img/1.jpg" alt="0">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/2.jpg" alt="1">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/3.jpg" alt="2">
+            <div class="carousel-caption">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<br>
+
+<br><br><br>
+    </section>
+</div>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/headhesive.min.js"></script>
+<script src="js/js.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
